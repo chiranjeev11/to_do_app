@@ -24,7 +24,7 @@ $(document).ready(function(){
 						<div>\
 							<i class="fa fa-bars light px-2" aria-hidden="true"></i>\
 							<button class="btn btn-secondary checkbox light"><i class="fa fa-trash-o light px-2" aria-hidden="true"></i></button>\
-							<input 	id="taskname" style="width: '+ ((value.val().length+5)*8) +'px; background:#303030; cursor: text;" type="text" class="pl-md-2 btn text-white shadow-none change" value='+value.val() +'>\
+							<input 	id="taskname" type="text" class="pl-md-2 btn text-white shadow-none change" value='+value.val() +' style="width: '+ Math.min(((value.val().length+5)*8),200) +'px; background:#303030; cursor: text;">\
 						</div>\
 						<div>\
 							<span id="duedate" class="light pr-1"></span>\
@@ -72,7 +72,7 @@ $(document).ready(function(){
 
 
 	$(document).on('input','.change',  function(){
-			var w = Math.max(Math.min(((this.value.length + 5) * 8), $(window).outerWidth()-1200),80);
+			var w = Math.min(((this.value.length + 5) * 8),200);
 			this.style.width =  w +'px';
 		})
 
