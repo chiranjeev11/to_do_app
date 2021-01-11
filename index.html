@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://use.fontawesome.com/070f63d583.js"></script>
+	<script src="app.js"></script>
+	<style>
+		body{
+			background:#686868;
+		}
+		.light{
+			color: #BEBEBE;
+		}
+		textarea::-webkit-scrollbar{
+		 width: 7px; 
+		}
+
+		textarea::-webkit-scrollbar-track{
+		 background-color: white; 
+		}
+
+		textarea::-webkit-scrollbar-thumb{
+		 background-color: #BEBEBE; 
+		}
+		textarea{
+			resize: none;
+			width: 100%;
+			background-color: #303030;
+		}
+		.dark{
+			background: #303030;
+		}
+		footer{
+			position: fixed;
+			background:#484848;
+			width: 100%;
+			top: 890px;
+		}
+
+	</style>
+
+<body>
+	<div class="container pb-3">
+		<div class="d-flex justify-content-center">
+			<div class="col-md-10">
+				<div class="tasks mt-5">
+					<div id="task" class="d-flex justify-content-center flex-column text-white">
+						
+					</div>
+					<div class="dark mt-3">
+						<i class="fa fa-plus light pl-2" aria-hidden="true"></i>
+						<input id="addtask" type="text" name="add" placeholder="New task..." value="" class="task btn text-white text-start shadow-none" style="width: 90%; cursor: text;">
+					</div>
+				</div>
+				<div id="notask" class="text-center mt-5 light">
+					<div>
+						<i class="fa fa-smile-o" style="font-size: 70px;" aria-hidden="true"></i>
+					</div>
+					<h2>No more tasks left</h2>
+					<p>Meanwhile, spread the love</p>
+				</div>
+				<div id="completed_task">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <footer class="py-3 light text-center">
+		<button id="done" class="btn btn-secondary py-1" style="width: 500px;">
+			<i class="fa fa-search-plus" aria-hidden="true"></i>
+			Done(<span id="completed">0</span>)
+		</button>
+	</footer> -->
+</body>
+</html>
