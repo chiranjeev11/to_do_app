@@ -14,6 +14,8 @@ $(document).ready(function(){
 
 	}
 
+	console.log('%cHello', `color:blue`);
+
 	$('#addtask').keypress(function(e){
 		var key = e.which;
 		if (key==13){
